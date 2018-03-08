@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Arimo-Bold.ttf">
+            <string>Arimo-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0l-F1-mGh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oF-vS-rJo">
+                            <rect key="frame" x="5" y="0.0" width="105" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="aZG-1s-Xei"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arimo-Bold" family="Arimo" pointSize="14"/>
+                            <color key="textColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMy-pL-iOf">
+                            <rect key="frame" x="110" y="0.0" width="115" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="9cP-rF-Zgz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arimo-Bold" family="Arimo" pointSize="11"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hm-IY-Unm">
+                            <rect key="frame" x="248" y="0.0" width="70" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="LHE-hp-OKe"/>
+                                <constraint firstAttribute="width" constant="70" id="PRN-6e-hTE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arimo-Bold" family="Arimo" pointSize="11"/>
+                            <color key="textColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="ZcT-57-jqP">
+                            <rect key="frame" x="228" y="9" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="0sd-Yn-hzg"/>
+                                <constraint firstAttribute="width" constant="16" id="nwe-Ee-Ffh"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="2oF-vS-rJo" secondAttribute="bottom" id="0zt-NI-MFE"/>
+                        <constraint firstItem="0Hm-IY-Unm" firstAttribute="top" secondItem="H0l-F1-mGh" secondAttribute="top" id="664-k1-MHw"/>
+                        <constraint firstItem="MMy-pL-iOf" firstAttribute="centerY" secondItem="H0l-F1-mGh" secondAttribute="centerY" id="BFF-W2-RlG"/>
+                        <constraint firstAttribute="bottom" secondItem="0Hm-IY-Unm" secondAttribute="bottom" id="CzK-kv-vFQ"/>
+                        <constraint firstAttribute="trailing" secondItem="0Hm-IY-Unm" secondAttribute="trailing" constant="2" id="FJ7-pj-0Ah"/>
+                        <constraint firstItem="MMy-pL-iOf" firstAttribute="centerX" secondItem="H0l-F1-mGh" secondAttribute="centerX" constant="7.5" id="GU3-lY-KnQ"/>
+                        <constraint firstItem="ZcT-57-jqP" firstAttribute="centerY" secondItem="0Hm-IY-Unm" secondAttribute="centerY" id="Laf-9Z-8z7"/>
+                        <constraint firstItem="ZcT-57-jqP" firstAttribute="leading" secondItem="MMy-pL-iOf" secondAttribute="trailing" constant="3" id="Qyq-PV-YM3"/>
+                        <constraint firstItem="2oF-vS-rJo" firstAttribute="leading" secondItem="H0l-F1-mGh" secondAttribute="leading" constant="5" id="Say-9s-RuM"/>
+                        <constraint firstItem="MMy-pL-iOf" firstAttribute="leading" secondItem="2oF-vS-rJo" secondAttribute="trailing" id="Tsn-GJ-p4A"/>
+                        <constraint firstItem="MMy-pL-iOf" firstAttribute="leading" secondItem="2oF-vS-rJo" secondAttribute="trailing" id="hGG-50-LtB"/>
+                        <constraint firstItem="2oF-vS-rJo" firstAttribute="top" secondItem="H0l-F1-mGh" secondAttribute="top" id="jyr-Jr-eYl"/>
+                        <constraint firstItem="0Hm-IY-Unm" firstAttribute="leading" secondItem="ZcT-57-jqP" secondAttribute="trailing" constant="4" id="qmx-Xr-iLa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="H0l-F1-mGh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BTr-Gs-9Rf"/>
+                <constraint firstAttribute="trailing" secondItem="H0l-F1-mGh" secondAttribute="trailing" id="L2x-it-kKd"/>
+                <constraint firstAttribute="bottom" secondItem="H0l-F1-mGh" secondAttribute="bottom" id="fXh-UG-16b"/>
+                <constraint firstItem="H0l-F1-mGh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ida-Ox-Hlg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="106" y="-76"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calendar" width="26" height="26"/>
+    </resources>
+</document>
