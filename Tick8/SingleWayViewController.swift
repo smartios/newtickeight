@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingleWayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Sort,filter {
+class SingleWayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, Sort,filter, PKSwipeCellDelegateProtocol {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var recordLbl: UILabel!
@@ -16,7 +16,7 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
     var selectedIndex = -1
     var webserviceHit = false
     var from = ""
-    
+    private var oldStoredCell:PKSwipeTableViewCell?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -203,12 +203,18 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let dict = (dataDict.value(forKey: "flightList") as! NSArray).object(at: indexPath.row) as! NSDictionary
             
+              /////////////////////////////////**///////////////////
             if (dict.value(forKey: "Segments") as! NSArray).count == 1
             {
-                cell = tableView.dequeueReusableCell(withIdentifier: "dataCell")!
-                let imgView = cell.viewWithTag(1) as! UIImageView
+//                cell = tableView.dequeueReusableCell(withIdentifier: "dataCell")!
                 
-                let label_flight = cell.viewWithTag(-100) as! UILabel
+                 var MyNewSwipecell = tableView.dequeueReusableCell(withIdentifier: "dataCell") as! MyCustomCellTableViewCell
+               
+                MyNewSwipecell.delegate = self
+                
+                let imgView = MyNewSwipecell.viewWithTag(1) as! UIImageView
+                
+                let label_flight = MyNewSwipecell.viewWithTag(-100) as! UILabel
                 
                 let AirlineName = (((((dict.value(forKey: "Segments") as! NSArray).object(at: 0) as! NSArray).object(at: 0) as! NSDictionary).value(forKey: "Airline") as! NSDictionary).value(forKey: "AirlineName") as! String)
                 
@@ -223,12 +229,12 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
                 
                 label_flight.attributedText = CommonValidations().attributedTexts(text1: AirlineName, attribs1: singleAttribute1, text2: code, attribs2: singleAttribute2)
                 
-                let timeLbl = cell.viewWithTag(2) as! UILabel
-                let durationLbl = cell.viewWithTag(3) as! UILabel
-                let amountLbl = cell.viewWithTag(4) as! UILabel
-                let wholeImg = cell.viewWithTag(6) as! UIImageView
-                let refundLbl = cell.viewWithTag(8) as! UILabel
-                let offeredPrice = cell.viewWithTag(7) as! UIImageView
+                let timeLbl = MyNewSwipecell.viewWithTag(2) as! UILabel
+                let durationLbl = MyNewSwipecell.viewWithTag(3) as! UILabel
+                let amountLbl = MyNewSwipecell.viewWithTag(4) as! UILabel
+                let wholeImg = MyNewSwipecell.viewWithTag(6) as! UIImageView
+                let refundLbl = MyNewSwipecell.viewWithTag(8) as! UILabel
+                let offeredPrice = MyNewSwipecell.viewWithTag(7) as! UIImageView
                 offeredPrice.isHidden = true
                 wholeImg.isHidden = true
                 
@@ -237,7 +243,7 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
                     wholeImg.isHidden = false
                 }
                 
-//                let dict = (dataDict.value(forKey: "flightList") as! NSArray).object(at: indexPath.row) as! NSDictionary
+                //                let dict = (dataDict.value(forKey: "flightList") as! NSArray).object(at: indexPath.row) as! NSDictionary
                 
                 if "\(dict.value(forKey: "IsRefundable")!)" == "true" || "\(dict.value(forKey: "IsRefundable")!)" == "1"
                 {
@@ -274,7 +280,7 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
                 
                 if(imgView.image == nil)
                 {
-                    imgView.image = #imageLiteral(resourceName: "default_airline")
+                   /// imgView.image =  imageLiteral(resourceName: "default_airline")
                 }
                 
                 timeLbl.text = "\(Deptime) - \(ArrTime)"
@@ -309,17 +315,24 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
                 if couponArr.contains("\(dict.value(forKey: "Source")!)")
                 {
                     fare = ceil(Double("\((dict.value(forKey: "Fare") as! NSDictionary).value(forKey: "OfferedFare")!)")!) + Double("\(dataDict.value(forKey: "mark_up_coupon")!)")!
-                   // offeredPrice.isHidden = false
+                    
+                    // offeredPrice.isHidden = false
+                     MyNewSwipecell.isPanEnabled = false
                 }
                 else if corporateArr.contains("\(dict.value(forKey: "Source")!)")
                 {
                     fare = ceil(Double("\((dict.value(forKey: "Fare") as! NSDictionary).value(forKey: "OfferedFare")!)")!)
                     //+ Double("\(dataDict.value(forKey: "mark_up_corporate")!)")!
+                    MyNewSwipecell.price_Toshow = Int(Double("\(dataDict.value(forKey: "mark_up_corporate")!)")!)
                     offeredPrice.isHidden = false
+                     MyNewSwipecell.isPanEnabled = true
+                   
                 }
                 else
                 {
                     fare = ceil(Double("\((dict.value(forKey: "Fare") as! NSDictionary).value(forKey: "PublishedFare")!)")!) - Double("\(dataDict.value(forKey: "mark_down_publish")!)")!
+                     MyNewSwipecell.isPanEnabled = false
+                    
                 }
                 
                 let formattedNumber = numberFormatter.string(from: NSNumber(value: fare))
@@ -333,7 +346,10 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
                 durationLbl.adjustsFontSizeToFitWidth = true
                 amountLbl.adjustsFontSizeToFitWidth = true
                 refundLbl.adjustsFontSizeToFitWidth = true
+            return MyNewSwipecell
             }
+                
+                  //////////////////////
             else
             {
                 cell = tableView.dequeueReusableCell(withIdentifier: "twoCell")!
@@ -1181,5 +1197,19 @@ class SingleWayViewController: UIViewController, UITableViewDelegate, UITableVie
                 })
             }
         }
+ 
+    
     }
+    
+    func swipeBeginInCell(cell: PKSwipeTableViewCell) {
+         oldStoredCell = cell
+    }
+    
+    func swipeDoneOnPreviousCell() -> PKSwipeTableViewCell? {
+                guard let cell = oldStoredCell else {
+                    return nil
+                }
+                return cell
+    }
+    
 }

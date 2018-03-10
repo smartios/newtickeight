@@ -28,7 +28,6 @@ class HomeViewController: UIViewController, UITableViewDataSource,UITableViewDel
         }
         bannerWebservice()
         self.navigationController?.navigationBar.isHidden = true
-        
         dataDic.setValue("FROM", forKey: "Origin")
         dataDic.setValue("", forKey: "OriginCity")
         dataDic.setValue("TO", forKey: "Destination")

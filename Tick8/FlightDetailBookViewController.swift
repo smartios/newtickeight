@@ -659,7 +659,19 @@ class FlightDetailBookViewController: UIViewController, UITableViewDataSource, U
                     img.layer.borderColor = supportingfuction.hexStringToUIColor(hex: "dedede").cgColor
                     
                     let lbl = cell.viewWithTag(2) as! UILabel
-                    lbl.text = "During the booking process, select 'Zero Cancellation' option by paying an additional fee of Rs. \(dataDic.value(forKey: "mark_up_corporate")!) per passenger & enjoy Zero penalty in case you wish to cancel this booking."
+                    
+                    let myString:NSString = "FULL REFUND  | Get full refund on cancellation penalties.Buy FR @ only Rs. \(dataDic.value(forKey: "mark_up_corporate")!)/- per passenger." as NSString
+                    var myMutableString = NSMutableAttributedString()
+
+                    myMutableString = NSMutableAttributedString(string: myString as String, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 10.0)!])
+                    myMutableString.addAttribute(NSForegroundColorAttributeName, value:  UIColor(red: 4.0/255, green: 77.0/255, blue: 127.0/255, alpha: 1.0), range: NSRange(location:0,length:11))
+                    // set label Attribute
+                    lbl.attributedText = myMutableString
+                    
+                   // lbl.text = "Get full refund on cancellation penalties. \n Buy FR @ only Rs. \(dataDic.value(forKey: "mark_up_corporate")!)/- per passenger."
+                    
+                    
+                  //  lbl.text = "During the booking process, select 'Zero Cancellation' option by paying an additional fee of Rs. \(dataDic.value(forKey: "mark_up_corporate")!) per passenger & enjoy Zero penalty in case you wish to cancel this booking."
                     
                     if(dataDic.value(forKey: "cancel") != nil && "\(dataDic.value(forKey: "cancel")!)" == "1")
                     {
@@ -2305,6 +2317,8 @@ class FlightDetailBookViewController: UIViewController, UITableViewDataSource, U
             }
         }
     }
+    
+    
 }
 
 

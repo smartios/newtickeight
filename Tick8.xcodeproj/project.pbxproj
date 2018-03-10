@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23035761204FF4410018D432 /* MyCustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303575E204FF4400018D432 /* MyCustomCellTableViewCell.swift */; };
+		23035762204FF4410018D432 /* PKSwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303575F204FF4410018D432 /* PKSwipeTableViewCell.swift */; };
 		42D5D5C4C9EB3433D3E7F27F /* libPods-Tick8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BC35B7D5EF4C339B7B15A /* libPods-Tick8.a */; };
 		B1050DBA1F4C345F005FF2D5 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1050DB81F4C345F005FF2D5 /* Fabric.framework */; };
 		B1050DBB1F4C345F005FF2D5 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1050DB91F4C345F005FF2D5 /* Crashlytics.framework */; };
@@ -152,6 +154,8 @@
 /* Begin PBXFileReference section */
 		1587B74DA6CB748F29BEFAC2 /* Pods-Tick8.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tick8.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tick8/Pods-Tick8.debug.xcconfig"; sourceTree = "<group>"; };
 		1D4BC35B7D5EF4C339B7B15A /* libPods-Tick8.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tick8.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2303575E204FF4400018D432 /* MyCustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		2303575F204FF4410018D432 /* PKSwipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKSwipeTableViewCell.swift; sourceTree = "<group>"; };
 		572BC2954DD8BCD6F9FBC789 /* Pods-Tick8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tick8.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tick8/Pods-Tick8.release.xcconfig"; sourceTree = "<group>"; };
 		B1050DB81F4C345F005FF2D5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		B1050DB91F4C345F005FF2D5 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
@@ -339,6 +343,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2303575D204FF4320018D432 /* SwipeTableCellLib */ = {
+			isa = PBXGroup;
+			children = (
+				2303575E204FF4400018D432 /* MyCustomCellTableViewCell.swift */,
+				2303575F204FF4410018D432 /* PKSwipeTableViewCell.swift */,
+			);
+			name = SwipeTableCellLib;
+			sourceTree = "<group>";
+		};
 		2327C336476B3616D11DEB79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +451,7 @@
 				B1C0A15C1F6124E00053AA71 /* PECropper */,
 				B1C0A1251F6115830053AA71 /* FSCalendar */,
 				B154DB5A1F471EC3000B7C97 /* Module 2 */,
+				2303575D204FF4320018D432 /* SwipeTableCellLib */,
 				B154DB591F471EA8000B7C97 /* Module 1 */,
 				B18818351F2B1DFC00792777 /* LaunchScreen.storyboard */,
 				B148B39B1F70E57E00924FC5 /* Assets.xcassets */,
@@ -657,7 +671,7 @@
 				TargetAttributes = {
 					B18818281F2B1DFC00792777 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = R2S9G5D89Q;
+						DevelopmentTeam = J6XQ9CB78Q;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -889,6 +903,8 @@
 				B1C0A1491F6115830053AA71 /* FSCalendarAppearance.m in Sources */,
 				B1E7555D1F41BFFB00B61819 /* FlightDetailBookViewController.swift in Sources */,
 				B18013D11F722B6C000F3043 /* RangeSlider.swift in Sources */,
+				23035761204FF4410018D432 /* MyCustomCellTableViewCell.swift in Sources */,
+				23035762204FF4410018D432 /* PKSwipeTableViewCell.swift in Sources */,
 				B1C0A14C1F6115830053AA71 /* FSCalendarCollectionView.m in Sources */,
 				B1C0A1471F6115830053AA71 /* FSCalendar+Deprecated.m in Sources */,
 				B1C0A14B1F6115830053AA71 /* FSCalendarCell.m in Sources */,
@@ -936,11 +952,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SINGSYS PTE. LTD.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SINGSYS PTE. LTD.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = R2S9G5D89Q;
+				DEVELOPMENT_TEAM = J6XQ9CB78Q;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -960,7 +976,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "6655aa12-3c20-4dbe-a2e3-65b16531c6a1";
+				PROVISIONING_PROFILE = "d476c9a5-1c0c-435d-bba7-3dbfe92a6614";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -988,11 +1004,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SINGSYS PTE. LTD.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SINGSYS PTE. LTD.";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = R2S9G5D89Q;
+				DEVELOPMENT_TEAM = J6XQ9CB78Q;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1005,7 +1021,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "6655aa12-3c20-4dbe-a2e3-65b16531c6a1";
+				PROVISIONING_PROFILE = "d476c9a5-1c0c-435d-bba7-3dbfe92a6614";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -1019,10 +1035,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SINGSYS PTE. LTD.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SINGSYS PTE. LTD.";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = R2S9G5D89Q;
+				DEVELOPMENT_TEAM = J6XQ9CB78Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1030,10 +1046,10 @@
 				INFOPLIST_FILE = Tick8/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tick8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.singsys.enterprise.Tick8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6655aa12-3c20-4dbe-a2e3-65b16531c6a1";
-				PROVISIONING_PROFILE_SPECIFIER = "Tick8 Production";
+				PROVISIONING_PROFILE = "d476c9a5-1c0c-435d-bba7-3dbfe92a6614";
+				PROVISIONING_PROFILE_SPECIFIER = Tick8;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tick8/Tick8-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1048,10 +1064,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Gautam Kukreja (R2S9G5D89Q)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: SINGSYS PTE. LTD.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: SINGSYS PTE. LTD.";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = R2S9G5D89Q;
+				DEVELOPMENT_TEAM = J6XQ9CB78Q;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1059,10 +1075,10 @@
 				INFOPLIST_FILE = Tick8/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Tick8;
+				PRODUCT_BUNDLE_IDENTIFIER = com.singsys.enterprise.Tick8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6655aa12-3c20-4dbe-a2e3-65b16531c6a1";
-				PROVISIONING_PROFILE_SPECIFIER = "Tick8 Production";
+				PROVISIONING_PROFILE = "d476c9a5-1c0c-435d-bba7-3dbfe92a6614";
+				PROVISIONING_PROFILE_SPECIFIER = Tick8;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tick8/Tick8-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
