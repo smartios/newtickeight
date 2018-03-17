@@ -326,6 +326,7 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                 }, failure: {
                     requestOperation, error in
                     supportingfuction.hideProgressHudInView(view: self.view)
+                   
                     if let urlResponse = requestOperation?.response as? HTTPURLResponse {
                         let status = urlResponse.statusCode
                         if status == 401
@@ -336,11 +337,7 @@ class MyProfileViewController: UIViewController, UITableViewDelegate, UITableVie
                             supportingfuction.showMessageHudWithMessage(message: "Please login to continue.", delay: 2.0)
                             return
                         }
-//                        print(status)
                     }
-
-//                    print(error)
-                    
                     supportingfuction.showMessageHudWithMessage(message: "Please try again..", delay: 2.0)
                 })
             }

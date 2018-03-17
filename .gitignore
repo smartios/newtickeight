@@ -12,6 +12,7 @@ build/
 xcuserdata/
 project.xcworkspace/
 DerivedData/
+.DS_Store
 
 ## Various settings
 *.pbxuser

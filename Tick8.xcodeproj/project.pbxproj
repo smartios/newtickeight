@@ -41,7 +41,6 @@
 		B18818671F2B5FDE00792777 /* LeftMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18818661F2B5FDE00792777 /* LeftMenuViewController.swift */; };
 		B18920EF1FA9C6B700F17571 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18920EE1FA9C6B700F17571 /* TransactionDetailViewController.swift */; };
 		B19BD7E61F75029400A7EEB2 /* 9W.png in Resources */ = {isa = PBXBuildFile; fileRef = B19BD7E51F75029400A7EEB2 /* 9W.png */; };
-		B1A221B0202AEDEC00254E24 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B1A221AF202AEDEC00254E24 /* .gitignore */; };
 		B1A36E121FA99BFE00A55A70 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A36E111FA99BFE00A55A70 /* TransactionViewController.swift */; };
 		B1A532CF1F7DFB620035489D /* H1.png in Resources */ = {isa = PBXBuildFile; fileRef = B1A532CD1F7DFB620035489D /* H1.png */; };
 		B1A532D01F7DFB620035489D /* WY.png in Resources */ = {isa = PBXBuildFile; fileRef = B1A532CE1F7DFB620035489D /* WY.png */; };
@@ -194,7 +193,6 @@
 		B18920EE1FA9C6B700F17571 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		B19A21611F6A783600C85B54 /* Tick8.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tick8.entitlements; sourceTree = "<group>"; };
 		B19BD7E51F75029400A7EEB2 /* 9W.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9W.png; sourceTree = "<group>"; };
-		B1A221AF202AEDEC00254E24 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B1A36E111FA99BFE00A55A70 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		B1A532CD1F7DFB620035489D /* H1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = H1.png; sourceTree = "<group>"; };
 		B1A532CE1F7DFB620035489D /* WY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WY.png; sourceTree = "<group>"; };
@@ -414,7 +412,6 @@
 		B18818201F2B1DFB00792777 = {
 			isa = PBXGroup;
 			children = (
-				B1A221AF202AEDEC00254E24 /* .gitignore */,
 				B188182B1F2B1DFC00792777 /* Tick8 */,
 				B188182A1F2B1DFC00792777 /* Products */,
 				B58179D6CB8944498D86C9F1 /* Pods */,
@@ -706,7 +703,6 @@
 				B1B4AB1C1F74D2C50077E06F /* BA.png in Resources */,
 				B154460B1F4AE0E000A75BE7 /* Arimo-Bold.ttf in Resources */,
 				B1B4AB3A1F74D2C50077E06F /* RA.png in Resources */,
-				B1A221B0202AEDEC00254E24 /* .gitignore in Resources */,
 				B1B4AB311F74D2C50077E06F /* LX.png in Resources */,
 				B1B4AB291F74D2C50077E06F /* GF.png in Resources */,
 				B1B4AB2C1F74D2C50077E06F /* IT.png in Resources */,
